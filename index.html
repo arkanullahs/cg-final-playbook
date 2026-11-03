@@ -548,6 +548,8 @@ details.lesson>summary{font-weight:700;color:#7048e8;cursor:pointer;padding:4px 
 :root[data-theme="dark"] .lesson .paper{background:#132b1a;color:#e9ecef}:root[data-theme="dark"] .lesson .pl{color:#8ce99a}
 .qth{border-top:1px solid var(--rule);padding:10px 0 4px}
 .qth h3{margin:6px 0 2px}
+/* skip layout/paint of off-screen blocks: the page has ~85k elements, without this every click re-lays-out all of it */
+main > section, main > article, main > .lecwalk{content-visibility:auto;contain-intrinsic-size:auto 1500px}
 </style>
 <div class="wrap">
 <nav class="toc" aria-label="Contents"><h2>Contents</h2><ol>
